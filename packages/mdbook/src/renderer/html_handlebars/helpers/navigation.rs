@@ -146,13 +146,12 @@ fn render(
 
     trace!("Render template");
 
+    let local_ctx = Context::wraps(&context)?;
+    let mut local_rc = rc.clone();
+
     _h.template()
         .ok_or_else(|| RenderError::new("Error with the handlebars template"))
-        .and_then(|t| {
-            let mut local_rc = rc.clone();
-            let local_ctx = Context::wraps(&context)?;
-            t.render(r, &local_ctx, &mut local_rc, out)
-        })?;
+        .and_then(|t| t.render(r, &local_ctx, &mut local_rc, out))?;
 
     Ok(())
 }

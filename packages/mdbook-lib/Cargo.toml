@@ -1,0 +1,16 @@
+[package]
+name = "mdbook-lib"
+version = "0.4.15"
+authors = [
+    "Mathieu David <mathieudavid@mathieudavid.org>",
+    "Michael-F-Bryan <michaelfbryan@gmail.com>",
+    "Matt Ickstadt <mattico8@gmail.com>",
+]
+documentation = "http://rust-lang.github.io/mdBook/index.html"
+edition = "2018"
+exclude = ["/guide/*"]
+keywords = ["book", "gitbook", "rustbook", "markdown"]
+license = "MPL-2.0"
+readme = "README.md"
+repository = "https://github.com/rust-lang/mdBook"
+description = "Creates a book from markdown files"
